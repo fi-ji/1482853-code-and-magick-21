@@ -29,22 +29,22 @@ const getRandomNumber = (arr) => {
 };
 
 const createName = (item) => {
-  let randomNum = Math.round(Math.random() * (item.length - 1));
+  const randomNum = Math.round(Math.random() * (item.length - 1));
   let anotherRandomNum = 0;
 
   while (randomNum === anotherRandomNum) {
     anotherRandomNum = Math.round(Math.random() * (item.length - 1));
   }
 
-  let name = item[randomNum][getRandomNumber(item[randomNum])];
-  let surname = item[anotherRandomNum][getRandomNumber(item[anotherRandomNum])];
-  let fullName = `${name} ${surname}`;
+  const name = item[randomNum][getRandomNumber(item[randomNum])];
+  const surname = item[anotherRandomNum][getRandomNumber(item[anotherRandomNum])];
+  const fullName = `${name} ${surname}`;
 
   return fullName;
 };
 
 const generateWizards = (dataarr, amount) => {
-  let wizards = [];
+  const wizards = [];
 
   for (let i = 0; i < amount; i++) {
     let wizard = {};
@@ -63,10 +63,10 @@ const generateWizards = (dataarr, amount) => {
 };
 
 const renderWizard = (wizard) => {
-  let wizardItem = similarWizardTemplate.cloneNode(true);
-  let wizardName = wizardItem.querySelector('.setup-similar-label');
-  let wizardCoat = wizardItem.querySelector('.wizard-coat');
-  let wizardEyes = wizardItem.querySelector('.wizard-eyes');
+  const wizardItem = similarWizardTemplate.cloneNode(true);
+  const wizardName = wizardItem.querySelector('.setup-similar-label');
+  const wizardCoat = wizardItem.querySelector('.wizard-coat');
+  const wizardEyes = wizardItem.querySelector('.wizard-eyes');
 
   wizardName.textContent = wizard.name;
   wizardCoat.style.fill = wizard.coatColor;
