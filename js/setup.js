@@ -36,7 +36,6 @@ const WIZARD_DATA = [
   {
     name: 'fireballColor',
     fireballColor: ['#ee4830', '#30a8ee', '#5ce6c0', '#e848d5', '#e6e848']
-    //fireballColor: ['rgb(238, 72, 48)', 'rgb(48, 168, 238)', 'rgb(92, 230, 192)', 'rgb(232, 72, 213)', 'rgb(230, 232, 72)']
   }
 ];
 
@@ -104,7 +103,7 @@ const onPopupEscPress = (evt) => {
   if (evt.key === 'Escape' && setupUsername !== document.activeElement) {
     evt.preventDefault();
     closePopup();
-  };
+  }
 };
 
 const openPopup = () => {
