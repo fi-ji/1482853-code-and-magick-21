@@ -1,9 +1,5 @@
 'use strict';
 
-const fireballSize = 22;
-const wizardSpeed = 3;
-const wizardWidth = 70;
-
 const CLOUD_WIDTH = 420;
 const CLOUD_HEIGHT = 270;
 const CLOUD_X = 100;
@@ -14,18 +10,6 @@ const BAR_GAP = 50;
 const TEXT_HEIGHT = 20;
 const BAR_WIDTH = 40;
 const BAR_HEIGHT = CLOUD_HEIGHT - PADDING * 2 - TEXT_HEIGHT * 3;
-
-// Настройка параметров
-
-const getFireballSpeed = (isMovingLeft) => isMovingLeft ? 2 : 5;
-
-const getWizardHeight = () => 1.337 * wizardWidth;
-
-const getWizardX = (fieldWidth) => (fieldWidth - wizardWidth) / 2;
-
-const getWizardY = (fieldHeight) => fieldHeight / 3;
-
-// Статистика
 
 const renderCloud = (ctx, x, y, color) => {
   ctx.fillStyle = color;
